@@ -19,7 +19,7 @@
 
 
         <script src="./assets/javascript/clock.js"></script>
-        <script src="./assets/javascript/snowflakes.js"></script>
+        <!-- <script src="./assets/javascript/snowflakes.js"></script> -->
     </head>
     <body class="text-center">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -29,7 +29,7 @@
                     <nav class="nav nav-masthead justify-content-center">
                         <div id="time" class="nav-link disabled"></div>
                         <div id="date" class="nav-link disabled"></div>
-                        <button type="button" id="snow-btn" class="btn btn-light">SNOW!</button>
+                        <button type="button" id="snow-btn" class="btn btn-light"></button>
                     </nav>
                 </div>
             </header>
@@ -37,14 +37,14 @@
             <main role="main" class="inner cover">
                 <h6>let's play a game...</h6>
                 <h1 class="cover">Guess what letter I'm thinking of...</h1>
-                <div class="lead">Wins: <span id="wins-ui" class="text-success"></span></div>
-                <div class="lead">Losses: <span id="losses-ui" class="text-danger"></span></div>
+                <div class="lead">Wins: <span id="wins-ui" class="text-success">0</span></div>
+                <div class="lead">Losses: <span id="losses-ui" class="text-danger">0</span></div>
                 <div class="lead">
-                    Guesses Left: <span id="guess_rem" class="text-info"></span>
+                    Guesses Left: <span id="guess_rem" class="text-info">10</span>
                 </div>
                 
                 <div class="lead">Your Guesses so far</div>
-                <div id="user-guesses" class="text-warning"></div>
+                <div id="user-guesses" class="text-warning">Type to update</div>
             </main>
             <canvas></canvas>
             <footer class="mastfoot mt-auto">
