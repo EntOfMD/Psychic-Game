@@ -41,6 +41,14 @@ body {
     max-width: 42em;
 }
 
+canvas {
+    z-index: 0;
+    max-height: 60%;
+}
+
+#snow-btn {
+    margin-left: 10px;
+}
 /*
  * Header
  */
