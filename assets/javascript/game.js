@@ -34,7 +34,7 @@ var block = {
     score: {
         wins: 0,
         losses: 0,
-        guesses_left: 10,
+        guesses_left: 9,
         userGuesses: [],
         compGens: [],
         gIndex: 0
@@ -56,13 +56,14 @@ var block = {
             randomGen = block.abc[
                 Math.floor(Math.random() * block.abc.length)
             ].toLowerCase();
+        } else {
+            block.score.compGens.push(randomGen);
+            block.score.gIndex++;
+            console.log(
+                `time: ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()} Computer Generated: ${randomGen}
+                So far generated: ${block.score.compGens}`
+            );
         }
-        block.score.compGens.push(randomGen);
-        block.score.gIndex++;
-        console.log(
-            `time: ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()} Computer Generated: ${randomGen}
-            So far generated: ${block.score.compGens}`
-        );
     },
 
     reWriteStats: () => {
@@ -73,7 +74,7 @@ var block = {
     },
 
     resetScore: () => {
-        block.score.guesses_left = 10;
+        block.score.guesses_left = 9;
         block.score.userGuesses = [];
         block.score.gIndex = 0;
     },
@@ -118,7 +119,7 @@ document.onkeyup = event => {
 
     //GAME OVER
 
-    if (block.score.guesses_left <= 0) {
+    if (block.score.guesses_left == 0) {
         switch (
             confirm(
                 `YOU'VE LOST! Your score is ${
@@ -130,11 +131,19 @@ document.onkeyup = event => {
                 block.score.losses++;
                 block.resetScore();
                 block.reWriteStats();
+                block.compGenGuess();
+                break;
+
+            case false:
+                location.href =
+                    'https://memegenerator.net/img/instances/65155782/qq.jpg';
                 break;
 
             default:
-                location.href =
-                    'https://memegenerator.net/img/instances/65155782/qq.jpg';
+                block.resetScore();
+                block.reWriteStats();
+                block.compGenGuess();
+
                 break;
         }
     }
