@@ -34,7 +34,7 @@ var block = {
     score: {
         wins: 0,
         losses: 0,
-        guesses_left: 9,
+        guesses_left: 10,
         userGuesses: [],
         compGens: [],
         gIndex: 0
@@ -61,7 +61,7 @@ var block = {
             block.score.gIndex++;
             console.log(
                 `time: ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()} Computer Generated: ${randomGen}
-                So far generated: ${block.score.compGens}`
+              So far generated: ${block.score.compGens}`
             );
         }
     },
@@ -104,7 +104,7 @@ document.onkeyup = event => {
         block.score.guesses_left > 0
     ) {
         block.score.wins += 1;
-        block.score.guesses_left = 10;
+        block.score.guesses_left = 9;
         block.score.userGuesses = [];
         block.reWriteStats();
         console.log(`won ${block.score.wins} times`);
@@ -119,7 +119,7 @@ document.onkeyup = event => {
 
     //GAME OVER
 
-    if (block.score.guesses_left == 0) {
+    if (block.score.guesses_left <= 0) {
         switch (
             confirm(
                 `YOU'VE LOST! Your score is ${
@@ -131,7 +131,6 @@ document.onkeyup = event => {
                 block.score.losses++;
                 block.resetScore();
                 block.reWriteStats();
-                block.compGenGuess();
                 break;
 
             case false:
@@ -140,10 +139,9 @@ document.onkeyup = event => {
                 break;
 
             default:
+                block.compGenGuess();
                 block.resetScore();
                 block.reWriteStats();
-                block.compGenGuess();
-
                 break;
         }
     }

@@ -1,68 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
-        />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link
-            rel="shortcut icon"
-            href="./assets/images/favicon.ico"
-            type="image/x-icon"
-        />
-        <title>Psychic-Game :: Ashell Fernando</title>
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <script src="./assets/javascript/clock.js"></script>
-    </head>
-    <body class="text-center">
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="masthead mb-auto">
-                <div class="inner">
-                    <h3 class="masthead-brand">Psychic-Game</h3>
-                    <nav class="nav nav-masthead justify-content-center">
-                        <div id="time" class="nav-link disabled"></div>
-                        <div id="date" class="nav-link disabled"></div>
-                    </nav>
-                </div>
-            </header>
-
-            <main role="main" class="inner cover">
-                <span id="extra_id">Let's play a game...</span>
-                <h1 class="cover">Guess what letter I'm thinking of...</h1>
-                <div class="lead">
-                    Wins: <span id="wins-ui" class="text-success"></span>
-                </div>
-                <div class="lead">
-                    Losses: <span id="losses-ui" class="text-danger"></span>
-                </div>
-                <div class="lead">
-                    Guesses Left: <span id="guess_rem" class="text-info"></span>
-                </div>
-
-                <div class="lead">Your Guesses so far</div>
-                <div id="user-guesses" class="text-warning"></div>
-            </main>
-
-            <footer class="mastfoot mt-auto">
-                <div class="inner">
-                    <p>
-                        Ashell Fernando &copy; 2019
-                        <br />
-                        <a href="https://github.com/EntOfMD/Psychic-Game"
-                            >Github Source</a
-                        >
-                    </p>
-                </div>
-            </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Psychic-Game :: Ashell Fernando</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/javascript/clock.js"></script>
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Psychic-Game</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <div id="time" class="nav-link disabled"></div>
+            <div id="date" class="nav-link disabled"></div>
+          </nav>
         </div>
-        <script src="./assets/javascript/game.js"></script>
-    </body>
+      </header>
+
+      <main role="main" class="inner cover">
+        <span id="extra_id">Let's play a game...</span>
+        <h1 class="cover">Guess what letter I'm thinking of...</h1>
+        <div class="lead">
+          Wins: <span id="wins-ui" class="text-success"></span>
+        </div>
+        <div class="lead">
+          Losses: <span id="losses-ui" class="text-danger"></span>
+        </div>
+        <div class="lead">
+          Guesses Left: <span id="guess_rem" class="text-info"></span>
+        </div>
+
+        <div class="lead">Your Guesses so far</div>
+        <div id="user-guesses" class="text-warning"></div>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>
+            Ashell Fernando &copy; 2019
+            <br />
+            <a href="https://github.com/EntOfMD/Psychic-Game">Github Source</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="./assets/javascript/game.js"></script>
+  </body>
 </html>
