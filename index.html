@@ -7,6 +7,11 @@
             content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link
+            rel="shortcut icon"
+            href="./assets/images/favicon.ico"
+            type="image/x-icon"
+        />
         <title>Psychic-Game :: Ashell Fernando</title>
         <link
             rel="stylesheet"
@@ -15,9 +20,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./assets/css/style.css" />
-
         <script src="./assets/javascript/clock.js"></script>
-        <!-- <script src="./assets/javascript/snowflakes.js"></script> -->
     </head>
     <body class="text-center">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -27,13 +30,12 @@
                     <nav class="nav nav-masthead justify-content-center">
                         <div id="time" class="nav-link disabled"></div>
                         <div id="date" class="nav-link disabled"></div>
-                        <!-- <button type="button" id="snow-btn" class="btn btn-light"></button> -->
                     </nav>
                 </div>
             </header>
 
             <main role="main" class="inner cover">
-                <h6>let's play a game...</h6>
+                <span id="extra_id">Let's play a game...</span>
                 <h1 class="cover">Guess what letter I'm thinking of...</h1>
                 <div class="lead">
                     Wins: <span id="wins-ui" class="text-success"></span>
@@ -48,7 +50,7 @@
                 <div class="lead">Your Guesses so far</div>
                 <div id="user-guesses" class="text-warning"></div>
             </main>
-            <!-- <canvas></canvas> -->
+
             <footer class="mastfoot mt-auto">
                 <div class="inner">
                     <p>
