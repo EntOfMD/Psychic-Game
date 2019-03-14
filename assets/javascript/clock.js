@@ -67,6 +67,6 @@ function printTime() {
 
     document.getElementById(
         'date'
-    ).innerHTML = `${day}, ${month} ${date} ${year}`;
+    ).innerHTML = `${day}, ${month} ${date}, ${year}`;
 }
 setInterval(printTime, 1000);
