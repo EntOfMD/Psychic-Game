@@ -63,10 +63,12 @@ function printTime() {
 
     month = monthName[month];
 
-    document.getElementById('time').innerHTML = `${hours}:${mins}:${secs}`;
+    // document.getElementById('time').innerHTML = `${hours}:${mins}:${secs}`;
+    $('#time').html(`${hours}:${mins}:${secs}`);
 
-    document.getElementById(
-        'date'
-    ).innerHTML = `${day}, ${month} ${date}, ${year}`;
+    // document.getElementById(
+    //     'date'
+    // ).innerHTML = `${day}, ${month} ${date}, ${year}`;
+    $('#date').html(`${day}, ${month} ${date}, ${year}`);
 }
 setInterval(printTime, 1000);
