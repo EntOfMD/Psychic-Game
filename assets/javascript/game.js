@@ -74,7 +74,7 @@ var block = {
     },
 
     resetScore: () => {
-        block.score.guesses_left = 9;
+        block.score.guesses_left = 10;
         block.score.userGuesses = [];
         block.score.gIndex = 0;
     },
@@ -98,13 +98,14 @@ document.onkeyup = event => {
         console.log(
             `you pressed ${userInput}, please type only alphabet letters`
         );
-        //do this if condition is true
+    } else if (block.score.userGuesses.includes(event.key)) {
+        console.log(`${event.key} has already been pressed`);
     } else if (
         userInput === block.score.compGens[block.score.gIndex - 1] &&
         block.score.guesses_left > 0
     ) {
         block.score.wins += 1;
-        block.score.guesses_left = 9;
+        block.score.guesses_left = 10;
         block.score.userGuesses = [];
         block.reWriteStats();
         console.log(`won ${block.score.wins} times`);
